@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторные работы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .button-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .button-group button {
+            margin-right: 10px;
+        }
+        .info-buttons {
+            display: none;
+            margin-top: 20px;
+        }
+        .info-buttons button {
+            display: block;
+            margin: 5px 0;
+        }
+        .info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 align="center">Звіти з лабораторних робіт</h1>
+    <h2 align="center">З дисципліни "Інтернет-технології та проєктування web-застосувань"</h2>
+    <h4 align="center">Студентка групи ІС-34 Гончаренко Вероніка</h4>
+
+    <div class="button-group">
+        <button onclick="showLab(1)">Лабораторна 1</button>
+        <button onclick="showLab(2)">Лабораторна 2</button>
+        <button onclick="showLab(3)">Лабораторна 3</button>
+        <button onclick="showLab(4)">Лабораторна 4</button>
+        <button onclick="showLab(5)">Лабораторна 5</button>
+        <button onclick="showLab(6)">Лабораторна 6</button>
+        <button onclick="showLab(7)">Лабораторна 7</button>
+        <button onclick="showLab(8)">Лабораторна 8</button>
+        <button onclick="showLab(9)">Лабораторна 9</button>
+    </div>
+
+    <div id="info-buttons" class="info-buttons"></div>
+    </div>
+
+    <div id="info" class="info"></div>
+
+    <script>
+        function showLab(labNumber) {
+            const infoButtonsDiv = document.getElementById("info-buttons");
+            const infoDiv = document.getElementById("info");
+
+            infoDiv.innerHTML = ""; 
+            
+            let buttonsHTML = '';
+            if (labNumber === 1) {
+                buttonsHTML = `
+                    <button onclick="showInfo('description')">Опис предметного середовища</button>
+                    <button onclick="showInfo('topic1')">Тема. Мета. Місце розташування Лабораторної 1</button>
+                    <button onclick="showInfo('structure')">Структура документа</button>
+                    <button onclick="showInfo('conclusions1')">Висновки</button>`
+                ;
+            } else if (labNumber === 2) {
+                buttonsHTML = `
+                    <button onclick="showInfo('topic2')">Тема. Мета. Місце розташування Лабораторної 2</button>
+                    <button onclick="showInfo('selectors')">Селектори</button>
+                    <button onclick="showInfo('css')">CSS</button>
+                    <button onclick="showInfo('conclusions2')">Висновки</button>`
+                    
+
+                ;
+            } else {
+                buttonsHTML = ''; 
+            }
+
+            infoButtonsDiv.innerHTML = buttonsHTML;
+            infoButtonsDiv.style.display = buttonsHTML ? "block" : "none"; 
+        }
+
+        function showInfo(infoType) {
+            let content = "";
+            if (infoType === 'description') {
+                content = "Веб-застосунок створений для людей, що шукають меблі для дому. Користувач буде мати доступ до меблевого каталогу, а в карточках товару буде зручно переглядати додаткову інформацію щодо виробів а саме: ціна, матеріал, розмір, асортимент кольорів та  різновиди товару. Якщо користувач вподобав товар, він буде мати можливість додати його до кошику. Для подальшого оформлення замовлення покупець заповнює форму з контакними даними та адресою отримання замовлення. Після отримання замовлення покупець буде мати змогу залишити відгук про якість товару.";
+            } else if (infoType === 'topic1') {
+                content =` 
+                <h3>Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ. РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.</h3>
+                <h3>Мета: придбати практичні навички роботи  з HTML-документом, таблицями, , зображеннями, посиланнями, списками, формами Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.</h3>
+                Посилання на репозиторій <a href="https://github.com/sataandagii/IC-34-Honcharenko-Lab1">https://github.com/sataandagii/IC-34-Honcharenko-Lab1<a><br>
+                Посилання на живу сторінку <a href="https://sataandagii.github.io/IC-34-Honcharenko-Lab1/">https://sataandagii.github.io/IC-34-Honcharenko-Lab1/<a>`;
+                
+            } else if (infoType === 'structure') {
+                content = "";
+            } else if (infoType === 'conclusions1') {
+                content = `Я придбала практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами
+Створила шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.`;
+            } else if (infoType === 'selectors') {
+                content = "Селектори.";
+            } else if (infoType === 'css') {
+                content = "css.";
+            } else if (infoType === 'conclusions2') {
+                content = "";
+            }
+            document.getElementById("info").innerHTML = content;
+        }
+    </script>
+
+</body>
+</html>
