@@ -13,7 +13,7 @@
         <h4>Студентка групи ІС-34 Гончаренко Вероніка</h4><br>
     </div>
     
-
+    
     <div class="labs">
         <a href="../index.html" style="margin-left:25px;">Лабораторна 1</a>
         <a href="../index2.html">Лабораторна 2</a>
@@ -28,22 +28,47 @@
 
     <div class="container">
         <div class="work">
-            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб2</a><br>
-            <a href="ways.html">Способи підключення стилів</a><br>
-            <a href="tag.html">Селектори тегу</a><br>
-            <a href="class.html">Селектори класу</a><br>
-            <a href="ident.html">Селектори ідентифікаторів</a><br>
-            <a href="another.html">Ішні селектори</a><br>
+            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб4</a><br>
+            <a href="mobile.html">Мобільна версія</a><br>
+            <a href="tablet.html">Планшетна версія</a><br>
+            <a href="desktop.html">Десктопна версія</a><br>
             <a href="end.html">Висновки</a><br>
         </div>
         <div class="content" style="margin-top:20px;">
-            <h2>Селектори ідентифікаторів</h2>
+            <p>Скріншот стилю десктопної версії</p>
+            <img src="screenshots/desktop.png" alt="mobile code" width="510px" height="429px">
+            <p>Код стилю десктопної версії</p>
             <pre>
-                #hdr{
-                    border: 2px solid white;
+                @media (min-width: 1024px) {
+                    header img{
+                        width: 15em;
+                    }
                 
+                    .hdr button{
+                        font-size:20px;
+                    }
+                
+                    .red{
+                        font-size:20px;
+                    }
+                
+                    .card{
+                        font-size:20px; 
+                        width: 220px;
+                    }
+                
+                    .card img{
+                        width: 100%;
+                    }
+                
+                    .tutorial{
+                        font-size:20px;
+                    }
+                
+                    .register{
+                        font-size:20px;
+                    }
                 }
-
             </pre>
         </div>
     </div>

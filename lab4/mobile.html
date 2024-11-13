@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <title>Лабораторні работи</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>Звіти з лабораторних робіт</h1>
+        <h2>З дисципліни "Інтернет-технології та проєктування web-застосувань"</h2>
+        <h4>Студентка групи ІС-34 Гончаренко Вероніка</h4><br>
+    </div>
+    
+    
+    <div class="labs">
+        <a href="../index.html" style="margin-left:25px;">Лабораторна 1</a>
+        <a href="../index2.html">Лабораторна 2</a>
+        <a href="../index3.html">Лабораторна 3</a>
+        <a href="../index4.html">Лабораторна 4</a>
+        <a href="../index5.html">Лабораторна 5</a>
+        <a href="../index6.html">Лабораторна 6</a>
+        <a href="../index7.html">Лабораторна 7</a>
+        <a href="../index8.html">Лабораторна 8</a>
+        <a href="../index9.html">Лабораторна 9</a>
+    </div>
+
+    <div class="container">
+        <div class="work">
+            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб4</a><br>
+            <a href="mobile.html">Мобільна версія</a><br>
+            <a href="tablet.html">Планшетна версія</a><br>
+            <a href="desktop.html">Десктопна версія</a><br>
+            <a href="end.html">Висновки</a><br>
+        </div>
+        <div class="content" style="margin-top:20px;">
+            <p>Скріншот стилю мобільної версії</p>
+            <img src="screenshots/mobile.png" alt="mobile code" width="307px" height="431px">
+            <p>Код стилю мобільної версії</p>
+            <pre>
+                body{
+                font-family:system-ui;
+            }
+            
+            header{
+                background-color: #4A505E; 
+                display: flex; 
+                align-items: center;
+                padding-top:2%;
+                padding-bottom: 2%;
+            }
+            
+            header img{
+                padding-left: 10px;
+                margin-right: 10px;
+                width: 5em;
+            }
+            
+            header button{
+                font-family:system-ui;
+            }
+            
+            .hdr{
+                display: flex;
+                flex-direction: column;
+                border: 2px solid white;
+            }
+            
+            .hdr button{
+                font-size:10px;
+                padding: 5px 5px;
+                background-color: #4A505E; 
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                transition-duration: 0.4s;
+                
+            }
+            .hdr button:hover{
+                background-color: white;
+                color: #4A505E;
+            }
+            
+            .red{
+                display: flex;
+                position:absolute;
+                right:0;
+                border: 2px solid #e81a4b;
+                background-color: #4A505E; 
+                color: white;
+                margin: 5%;
+                padding:2%;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                transition-duration: 0.4s;
+                overflow: hidden;
+            }
+            
+            .red:hover{
+                background-color: #e81a4b;
+                color: white;
+            }
+            
+            h1{
+                margin: 0;
+                text-align: center;
+                color:white;
+                background:#e81a4b;
+            }
+            
+            .categories{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+            .card{
+                margin: 2%;
+                border: 3px solid black;
+                border-radius: 10px;
+                transition-duration: 0.3s;
+            }
+            
+            .card img{
+                width: 90px;
+            }
+            
+            .card:hover{
+                border: 3px solid #e81a4b; 
+            }
+            
+            .picture{
+               padding: 15px; 
+            }
+            
+            .productname{
+                text-align: center;
+                border-top: 2px solid rgb(147, 147, 147);
+            }
+            
+            .tutorial{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            
+            .rectangle {
+                counter-reset: li; 
+                list-style: none; 
+                padding: 0;
+            }
+            .rectangle a {
+                position: relative;
+                display: block;
+                padding: .4em .4em .4em .8em;
+                margin: .5em 0 .5em 2.5em;
+                background: #f2f2f2;
+            }
+               
+            .rectangle a:before {
+                content: counter(li);
+                counter-increment: li;
+                position: absolute;
+                left: -2.5em;
+                top: 50%;
+                margin-top: -1em;
+                background: #e81a4b;
+                color:white;
+                height: 2em;
+                width: 2em;
+                line-height: 2em;
+                text-align: center;
+                font-weight: bold;
+            }
+            
+            .register{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+             .sbmt {
+                font-size:medium;
+                border: 2px solid #e81a4b;
+                background-color: white; 
+                padding: 5px 20px;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                transition-duration: 0.4s;
+             }
+            
+             .sbmt:hover{
+                background-color: #e81a4b;
+                color: white;
+             }
+            
+             .impt{
+                height: 38px;
+                padding: 0 10px;
+                border: 1px solid rgba(237, 82, 118, 0.578);
+                font-size: 20px;
+                outline: none;
+             }</pre>
+        </div>
+    </div>
+</body>
+</html>
