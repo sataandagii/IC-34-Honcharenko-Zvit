@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <title>Лабораторні работи</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>Звіти з лабораторних робіт</h1>
+        <h2>З дисципліни "Інтернет-технології та проєктування web-застосувань"</h2>
+        <h4>Студентка групи ІС-34 Гончаренко Вероніка</h4><br>
+    </div>
+    
+    
+    <div class="labs">
+        <a href="../index.html" style="margin-left:25px;">Лабораторна 1</a>
+        <a href="../index2.html">Лабораторна 2</a>
+        <a href="../index3.html">Лабораторна 3</a>
+        <a href="../index4.html">Лабораторна 4</a>
+        <a href="../index5.html">Лабораторна 5</a>
+        <a href="../index6.html">Лабораторна 6</a>
+        <a href="../index7.html">Лабораторна 7</a>
+        <a href="../index8.html">Лабораторна 8</a>
+        <a href="../index9.html">Лабораторна 9</a>
+    </div>
+
+    <div class="container">
+        <div class="work">
+            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб5</a><br>
+            <a href="task1.html">Завдання 1</a><br>
+            <a href="task2.html">Завдання 2</a><br>
+            <a href="task3.html">Завдання 3</a><br>
+            <a href="task4.html">Завдання 4</a><br>
+            <a href="task5.html">Завдання 5</a><br>
+            <a href="end.html">Висновки</a><br>
+        </div>
+        <div class="content" style="margin-top:20px;">
+            <p>Програмний код</p>
+            <pre>
+                        function makeTransaction(quantity, pricePerDroid)
+                {
+                    if (isNaN(quantity) || isNaN(pricePerDroid)) 
+                    {
+                        console.log("Please enter the right number");
+                        return;
+                    }
+
+                    const totalPrice = quantity * pricePerDroid;
+                    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+                }
+
+                let repeat;
+                do
+                {
+                    const quantity = prompt("Enter the number of droids:");
+                    const pricePerDroid = prompt("Enter the price per droid:");
+
+                    console.log(makeTransaction(quantity, pricePerDroid));
+                    repeat = confirm("Enter info again?");
+                } while(repeat)
+            </pre>
+            <p>Скріншот виконання</p>
+            <img src="screenshots/task1.png">
+        </div>
+    </div>
+</body>
+</html>

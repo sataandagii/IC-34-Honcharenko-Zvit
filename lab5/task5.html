@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <title>Лабораторні работи</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>Звіти з лабораторних робіт</h1>
+        <h2>З дисципліни "Інтернет-технології та проєктування web-застосувань"</h2>
+        <h4>Студентка групи ІС-34 Гончаренко Вероніка</h4><br>
+    </div>
+    
+    
+    <div class="labs">
+        <a href="../index.html" style="margin-left:25px;">Лабораторна 1</a>
+        <a href="../index2.html">Лабораторна 2</a>
+        <a href="../index3.html">Лабораторна 3</a>
+        <a href="../index4.html">Лабораторна 4</a>
+        <a href="../index5.html">Лабораторна 5</a>
+        <a href="../index6.html">Лабораторна 6</a>
+        <a href="../index7.html">Лабораторна 7</a>
+        <a href="../index8.html">Лабораторна 8</a>
+        <a href="../index9.html">Лабораторна 9</a>
+    </div>
+
+    <div class="container">
+        <div class="work">
+            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб5</a><br>
+            <a href="task1.html">Завдання 1</a><br>
+            <a href="task2.html">Завдання 2</a><br>
+            <a href="task3.html">Завдання 3</a><br>
+            <a href="task4.html">Завдання 4</a><br>
+            <a href="task5.html">Завдання 5</a><br>
+            <a href="end.html">Висновки</a><br>
+        </div>
+        <div class="content" style="margin-top:20px;">
+            <p>Програмний код</p>
+            <h3>index.js</h3>
+            <pre>
+                const inputA = document.querySelector('.numberA');
+                const inputB = document.querySelector('.numberB');
+                const operation = document.querySelector('.operation');
+                const result = document.querySelector('.result');
+                const output = document.querySelector('.output');
+
+                operation.addEventListener('change', function() {
+                    if (operation.value === 'sqrt') {
+                        inputB.disabled = true;
+                    } else {
+                        inputB.disabled = false;
+                    }
+                });
+
+                result.addEventListener('click', function()
+                {
+                    const a = Number(inputA.value);
+                    const b = Number(inputB.value);
+                    const selected = operation.value;
+
+                    const result = calculate(a, b, selected);
+
+                    console.log(result);
+                });
+            </pre>
+
+            <h3>math.js</h3>
+            <pre>
+                function sum(a, b)
+                {
+                    return a + b;
+                }
+
+                function substract(a, b)
+                {
+                    return a - b;
+                }
+
+                function multiply(a, b)
+                {
+                    return a * b;
+                }
+
+                function division(a, b)
+                {
+                    return a / b;
+                }
+
+                function divisionWithRemain(a, b)
+                {
+                    return a % b;
+                }
+
+                function squareRoot(a, b)
+                {
+                    return Math.sqrt(a, b);
+                }
+
+                function power(a, b)
+                {
+                    return Math.pow(a, b);
+                }
+            </pre>
+
+            <h3>calc.js</h3>
+            <pre>
+                function calculate(a, b, operation)
+                {
+                    let result = null;
+                    switch(operation)
+                    {
+                        case "+":
+                            result = sum(a, b);
+                            break;
+                        
+                        case "-":
+                            result = substract(a, b);
+                            break;
+
+                        case "*":
+                            result = multiply(a, b);
+                            break;
+                            
+                        case "/":
+                            result = division(a, b);
+                            break; 
+
+                        case "%":
+                            result = divisionWithRemain(a, b);
+                            break; 
+                        
+                        case "sqrt":
+                            result = squareRoot(a);
+                            break; 
+
+                        case "^":
+                            result = power(a, b);
+                            break;
+                            
+                        default:
+                            break;   
+                    }
+
+                    return result;
+                }
+            </pre>
+            <p>Скріншот виконання</p>
+            <img src="screenshots/task5-1.png">
+            <img src="screenshots/task5-2.png">
+        </div>
+    </div>
+</body>
+</html>
