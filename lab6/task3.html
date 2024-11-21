@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <title>Лабораторні работи</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>Звіти з лабораторних робіт</h1>
+        <h2>З дисципліни "Інтернет-технології та проєктування web-застосувань"</h2>
+        <h4>Студентка групи ІС-34 Гончаренко Вероніка</h4><br>
+    </div>
+    
+    
+    <div class="labs">
+        <a href="../index.html" style="margin-left:25px;">Лабораторна 1</a>
+        <a href="../index2.html">Лабораторна 2</a>
+        <a href="../index3.html">Лабораторна 3</a>
+        <a href="../index4.html">Лабораторна 4</a>
+        <a href="../index5.html">Лабораторна 5</a>
+        <a href="../index6.html">Лабораторна 6</a>
+        <a href="../index7.html">Лабораторна 7</a>
+        <a href="../index8.html">Лабораторна 8</a>
+        <a href="../index9.html">Лабораторна 9</a>
+    </div>
+
+    <div class="container">
+        <div class="work">
+            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб6</a><br>
+            <a href="task1.html">Завдання 1</a><br>
+            <a href="task3.html">Завдання 3</a><br>
+            <a href="task5.html">Завдання 5</a><br>
+            <a href="task7.html">Завдання 7</a><br>
+            <a href="task9.html">Завдання 9</a><br>
+            <a href="task10.html">Завдання 10</a><br>
+            <a href="end.html">Висновки</a><br>
+        </div>
+        <div class="content" style="margin-top:20px;">
+            <h1>Код програми:</h1>
+            <pre>
+            function findExpired(medicines){
+                const notExpired = [];
+    
+                for (const medicine in medicines){
+                    if(medicines[medicine] > new Date())
+                        notExpired.push(medicine);
+                }
+    
+                return notExpired;
+            }
+    
+            const medicines = {
+                Агалгін: new Date("2022-05-01"),
+                Ношпа: new Date("2025-07-02"),
+                Аспірин: new Date("2022-08-15"),
+                Аспаркам: new Date("2024-04-18"),
+                Парацетамол: new Date("2023-11-05"),
+                Моксілон: new Date("2024-01-25"),
+                Віферон: new Date("2023-09-30"),
+                Ібуфен: new Date("2024-07-17"),
+                Терафлю: new Date("2025-01-12"),
+                Альфахолін: new Date("2024-12-21")
+            };
+    
+            const notExpired = findExpired(medicines);
+            const sortedMedicines = notExpired.sort((a, b) => {
+                const dateA = medicines[a];
+                const dateB = medicines[b];
+                return dateA - dateB; 
+            });
+    
+            console.log(sortedMedicines);
+            </pre>
+
+            <h1>Скріншот виконання:</h1>
+            <img src="screenshots/task3.png">
+        </div>
+    </div>
+</body>
+</html>
