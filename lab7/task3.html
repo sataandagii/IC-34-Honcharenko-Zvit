@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <title>Лабораторні работи</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>Звіти з лабораторних робіт</h1>
+        <h2>З дисципліни "Інтернет-технології та проєктування web-застосувань"</h2>
+        <h4>Студентка групи ІС-34 Гончаренко Вероніка</h4><br>
+    </div>
+    
+    
+    <div class="labs">
+        <a href="../index.html" style="margin-left:25px;">Лабораторна 1</a>
+        <a href="../index2.html">Лабораторна 2</a>
+        <a href="../index3.html">Лабораторна 3</a>
+        <a href="../index4.html">Лабораторна 4</a>
+        <a href="../index5.html">Лабораторна 5</a>
+        <a href="../index6.html">Лабораторна 6</a>
+        <a href="../index7.html">Лабораторна 7</a>
+        <a href="../index8.html">Лабораторна 8</a>
+        <a href="../index9.html">Лабораторна 9</a>
+    </div>
+
+    <div class="container">
+        <div class="work">
+            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб6</a><br>
+            <a href="task1.html">Завдання 1</a><br>
+            <a href="task3.html">Завдання 3</a><br>
+            <a href="task5.html">Завдання 5</a><br>
+            <a href="task7.html">Завдання 7</a><br>
+            <a href="task8.html">Завдання 8</a><br>
+            <a href="task9.html">Завдання 9</a><br>
+            <a href="task10.html">Завдання 10</a><br>
+            <a href="end.html">Висновки</a><br>
+        </div>
+        <div class="content" style="margin-top:20px;">
+            <h1>Код програми:</h1>
+            <pre>
+                const button3 = document.querySelector("#button3");
+                const input3 = document.querySelector("#input3");
+                button3.addEventListener('click', () => {
+                    if(input3.type == "text"){
+                        input3.setAttribute("type", "password");
+                        button3.textContent = "Show";
+                    }
+                    else {
+                        input3.setAttribute("type", "text");
+                        button3.textContent = "Hide";
+                    }
+                });
+            </pre>
+
+            <h1>Скріншот виконання:</h1>
+            <img src="screenshots/task3.1.png">
+            <img src="screenshots/task3.2.png">
+        </div>
+    </div>
+</body>
+</html>
