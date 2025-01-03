@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <title>Лабораторні работи</title>
+</head>
+<body>
+    <div id="intro">
+        <h1>Звіти з лабораторних робіт</h1>
+        <h2>З дисципліни "Інтернет-технології та проєктування web-застосувань"</h2>
+        <h4>Студентка групи ІС-34 Гончаренко Вероніка</h4><br>
+    </div>
+    
+    
+    <div class="labs">
+        <a href="index.html" style="margin-left:25px;">Лабораторна 1</a>
+        <a href="index2.html">Лабораторна 2</a>
+        <a href="index3.html">Лабораторна 3</a>
+        <a href="index4.html">Лабораторна 4</a>
+        <a href="index5.html">Лабораторна 5</a>
+        <a href="index6.html">Лабораторна 6</a>
+        <a href="index7.html">Лабораторна 7</a>
+        <a href="index8.html">Лабораторна 8</a>
+    </div>
+
+    <div class="container">
+        <div class="work">
+            <a href="topic.html" style="margin-top:5%;">Тема, Мета, Місце розташування Лаб8</a><br>
+            <a href="task1.html">Завдання 1</a><br>
+            <a href="task2.html">Завдання 2</a><br>
+            <a href="end.html">Висновки</a><br>
+        </div>
+        <div class="content" style="margin-top:20px;">
+            <h1>Код програми:</h1>
+            <pre>
+                    const images = [
+                    {
+                        preview:'JS/sleepy preview.jpg',
+                        original: 'JS/sleepy.jpg',
+                        description: 'this car is very eepy',
+                    },
+                    
+                    {
+                        preview:'JS/angry preview.jpg',
+                        original: 'JS/angry.jpg',
+                        description: 'this car is very angry',
+                    },
+
+                    {
+                        preview:'JS/distinguished preview.jpg',
+                        original: 'JS/distinguished.jpg',
+                        description: 'this car is very distinguished',
+                    },
+                    
+
+                    ]
+
+                    const gallery = document.querySelector('.gallery');
+
+                    const galleryHtml = images.map(({ preview, original, description }) => {
+                        return `
+                        &lt;li class="gallery-item"&gt;
+                            &lt;a href="${original}" class="gallery-link">
+                                &lt;img src="${preview}" alt="${description}" class="gallery-image">
+                                &lt;/a>
+                                &lt;/li>
+                        `;
+                    }).join('');
+
+                    gallery.innerHTML = galleryHtml;
+
+                    gallery.addEventListener('click', (event) => {
+                        event.preventDefault();
+
+                        if (event.target.nodeName !== 'IMG') {
+                            return;
+                        }
+
+                        const originalImageSrc = event.target.closest('a').href;
+
+                        const instance = basicLightbox.create(`
+                            &lt;img src="${originalImageSrc}" alt="${event.target.alt}">
+                        `);
+
+                        instance.show();
+                    });          
+            </pre>
+
+            <h1>Скріншот виконання:</h1>
+            <img src="screenshots/task1 screen.png" width="640px" height="307px">
+            <img src="screenshots/task1 photo.png" width="640px" height="307px">
+        </div>
+    </div>
+</body>
+</html>
