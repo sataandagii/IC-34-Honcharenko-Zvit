@@ -1,5 +1,18 @@
 #intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+}
+
+#intro .text {
+    text-align: center;
+    flex: 1;
+}
+
+#intro img.profile-photo {
+    width: 100px;
+    margin-bottom: 10px;;
 }
 
 .container{
